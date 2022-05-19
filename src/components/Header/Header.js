@@ -12,6 +12,11 @@ const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 430px) {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
 `;
 
 const Header = () => {
