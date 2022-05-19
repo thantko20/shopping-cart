@@ -1,30 +1,23 @@
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import StyledLink from '../generic/StyledLink';
-
-const StyledNav = styled.ul`
-  display: flex;
-  gap: 2rem;
-`;
+import NavLink from './NavLink';
 
 const Nav = () => {
   return (
-    <StyledNav>
+    <ul className='flex gap-3 items-center'>
       <li>
-        <StyledLink to='shop'>Shop</StyledLink>
+        <NavLink path='/shop'>Shop</NavLink>
       </li>
       <li>
-        <StyledLink to='about'>About</StyledLink>
+        <NavLink path='/about'>About</NavLink>
       </li>
-      <li aria-label='Cart'>
-        <StyledLink to='cart'>
+      <li>
+        <NavLink path='/cart'>
           <FontAwesomeIcon icon={faCartShopping} />
-        </StyledLink>
+        </NavLink>
       </li>
-    </StyledNav>
+    </ul>
   );
 };
 

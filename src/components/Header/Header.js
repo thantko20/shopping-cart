@@ -1,32 +1,15 @@
 import React from 'react';
-import StyledLink from '../generic/StyledLink';
-import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import Nav from './Nav';
-
-const StyledHeader = styled.header`
-  padding: 1rem ${({ theme }) => theme.paddingX};
-  width: 100%;
-  background-color: inherit;
-  position: sticky;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  @media (max-width: 430px) {
-    flex-direction: column;
-    gap: 1.2rem;
-  }
-`;
 
 const Header = () => {
   return (
-    <StyledHeader>
-      <h1>
-        <StyledLink to='/'>goodies</StyledLink>
+    <header className='flex justify-between px-10 py-3'>
+      <h1 className='text-4xl font-bold font-lobster underline transition-colors duration-300 hover:text-blue-500'>
+        <Link to='/'>goodies</Link>
       </h1>
       <Nav />
-    </StyledHeader>
+    </header>
   );
 };
 
