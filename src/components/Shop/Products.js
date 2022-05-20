@@ -1,15 +1,16 @@
 import React from 'react';
 import Product from './Product';
+import uniqid from 'uniqid';
 
 const Products = ({ products, addToCart, currentCategory = 'all' }) => {
   return (
-    <div>
+    <div className='grid grid-cols-productsSm lg:grid-cols-productsLg gap-10 items-center w-fit mx-auto'>
       {currentCategory === 'all'
         ? products.map((product) => (
             <Product
               productDetail={product}
               addToCart={addToCart}
-              key={product.id}
+              key={uniqid()}
             />
           ))
         : products
@@ -18,7 +19,7 @@ const Products = ({ products, addToCart, currentCategory = 'all' }) => {
               <Product
                 productDetail={product}
                 addToCart={addToCart}
-                key={product.id}
+                key={uniqid()}
               />
             ))}
     </div>
