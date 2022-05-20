@@ -5,7 +5,7 @@ import NavLink from './NavLink';
 
 const Nav = () => {
   return (
-    <ul className='flex gap-3 items-center'>
+    <ul className='flex gap-5 items-center'>
       <li>
         <NavLink path='/shop'>Shop</NavLink>
       </li>
