@@ -4,8 +4,8 @@ const useCalculateTotalItems = (cart) => {
   const [totalItems, setTotalItems] = useState(0);
 
   useEffect(() => {
-    const newTotalItems = cart.reduce((prevItem, currItem) => {
-      return prevItem.quantity + currItem.quantity;
+    const newTotalItems = cart.reduce((prev, curr) => {
+      return prev + curr.quantity;
     }, 0);
 
     setTotalItems(newTotalItems);
@@ -18,11 +18,11 @@ const useCalculateTotalAmount = (cart) => {
   const [totalAmount, setTotalAmount] = useState(0);
 
   useEffect(() => {
-    const newTotalAmount = cart.reduce((prevItem, currItem) => {
-      return (
-        prevItem.price * prevItem.quantity + currItem.price * currItem.quantity
-      );
+    let newTotalAmount = cart.reduce((prev, curr) => {
+      return prev + curr.price * curr.quantity;
     }, 0);
+
+    newTotalAmount = parseFloat(newTotalAmount).toFixed(2);
 
     setTotalAmount(newTotalAmount);
   }, [cart]);
