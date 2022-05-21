@@ -4,26 +4,26 @@ const Product = ({ productDetail, addToCart }) => {
   const { title, price, image: imgSrc, id } = productDetail;
 
   return (
-    <div className='w-[250px] h-[450px] text-sm shadow-md rounded-md flex flex-col'>
+    <div className='flex h-[450px] w-[250px] flex-col rounded-md shadow-md'>
       <img
         src={imgSrc}
         alt={title}
-        className='w-full aspect-square object-contain'
+        className='aspect-square w-full object-contain'
       />
-      <div className='px-3 py-4 flex flex-col items-start flex-grow'>
+      <div className='flex flex-grow flex-col items-start px-3 py-4'>
         <div
           title={title}
-          className='font-bold text-gray-700 mb-2 max-w-full overflow-hidden max-h-[7ch]'
+          className='mb-4 max-h-[7ch] max-w-full overflow-hidden font-bold text-gray-900'
         >
           {title}
         </div>
         <div>
           <span className='align-top text-xs'>$</span>
-          <span className='text-sm font-semibold'>{price}</span>
+          <span className='font-medium text-gray-900'>{price}</span>
         </div>
         <button
           onClick={() => addToCart(id)}
-          className='mt-auto px-2 py-1 bg-blue-500 text-white font-semibold text-xs rounded border-2 border-blue-500 transition-colors duration-300 hover:text-black hover:bg-transparent'
+          className='mt-auto rounded border-2 border-blue-500 bg-blue-500 px-2 py-1 text-sm font-semibold text-white transition-colors duration-300 hover:bg-transparent hover:text-black'
         >
           Add To Cart
         </button>

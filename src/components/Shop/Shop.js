@@ -1,7 +1,12 @@
 import React from 'react';
+import Products from './Products';
 
-const Shop = () => {
-  return <div>This is Shop</div>;
+const Shop = ({ products, addToCart }) => {
+  return (
+    <div className='mb-10'>
+      <Products products={products} addToCart={addToCart} />
+    </div>
+  );
 };
 
 export default Shop;
