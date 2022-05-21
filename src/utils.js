@@ -26,6 +26,8 @@ const useCalculateTotalAmount = (cart) => {
 
     setTotalAmount(newTotalAmount);
   }, [cart]);
+
+  return totalAmount;
 };
 
 export { useCalculateTotalItems, useCalculateTotalAmount };
