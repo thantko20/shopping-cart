@@ -2,10 +2,10 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from '../Header/Header';
 
-const Layout = () => {
+const Layout = ({ totalItems }) => {
   return (
-    <div className='min-h-screen bg-white font-raleway flex flex-col'>
-      <Header />
+    <div className='flex min-h-screen flex-col bg-white font-raleway'>
+      <Header totalItems={totalItems} />
       <Outlet />
     </div>
   );
