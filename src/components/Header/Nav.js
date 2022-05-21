@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import NavLink from './NavLink';
 
-const Nav = () => {
+const Nav = ({ totalItems }) => {
   return (
-    <ul className='flex gap-5 items-center'>
+    <ul className='flex items-center gap-5'>
       <li>
         <NavLink path='/shop'>Shop</NavLink>
       </li>
@@ -14,7 +14,12 @@ const Nav = () => {
       </li>
       <li>
         <NavLink path='/cart'>
-          <FontAwesomeIcon icon={faCartShopping} />
+          <div className='relative'>
+            <div className='absolute top-[-6px] right-[-6px] flex h-4 w-4 items-center justify-center rounded-full bg-rose-600 p-1 text-sm text-white'>
+              {totalItems}
+            </div>
+            <FontAwesomeIcon icon={faCartShopping} />
+          </div>
         </NavLink>
       </li>
     </ul>
