@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
 
-const Header = () => {
+const Header = ({ totalItems }) => {
   return (
-    <header className='flex flex-col justify-between items-center px-10 py-3 lg:flex-row gap-4 mb-4 shadow-md sticky top-0 bg-inherit'>
-      <h1 className='text-4xl font-bold font-lobster underline transition-colors duration-300 hover:text-blue-500'>
+    <header className='sticky top-0 mb-10 flex flex-col items-center justify-between gap-4 border-t-8 border-blue-500 bg-inherit px-10 py-3 shadow-md lg:flex-row'>
+      <h1 className='font-lobster text-4xl font-bold underline transition-colors duration-300 hover:text-blue-500'>
         <Link to='/'>goodies</Link>
       </h1>
-      <Nav />
+      <Nav totalItems={totalItems} />
     </header>
   );
 };
