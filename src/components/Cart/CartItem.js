@@ -3,13 +3,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 const CartItem = ({
-  title,
-  image: imgSrc,
-  price,
-  quantity,
-  id,
-  increaseQuantiy,
-  decreaseQuantity,
+  itemInfo: {
+    title,
+    image: imgSrc,
+    price,
+    quantity,
+    id,
+    increaseQuantiy,
+    decreaseQuantity,
+  },
 }) => {
   return (
     <div>
