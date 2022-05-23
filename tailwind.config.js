@@ -9,6 +9,7 @@ module.exports = {
       gridTemplateColumns: {
         productsLg: 'repeat(4, auto)',
         productsSm: 'repeat(2, auto)',
+        productsXs: 'repeat(1, auto)',
       },
     },
   },
