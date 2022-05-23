@@ -4,7 +4,7 @@ import uniqid from 'uniqid';
 
 const Products = ({ products, addToCart, currentCategory = 'all' }) => {
   return (
-    <div className='grid grid-cols-productsSm lg:grid-cols-productsLg gap-10 items-center w-fit mx-auto'>
+    <div className='mx-auto grid w-fit grid-cols-productsXs items-center gap-10 md:grid-cols-productsSm lg:grid-cols-productsLg'>
       {currentCategory === 'all'
         ? products.map((product) => (
             <Product
