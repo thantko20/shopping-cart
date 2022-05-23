@@ -12,13 +12,14 @@ const CartItem = ({
     <div className='flex w-full'>
       <img src={imgSrc} alt={title} className='mr-4 aspect-square w-[100px]' />
       <div>
-        <div className='font-bold'>{title}</div>
+        <div className='mb-2 font-bold'>{title}</div>
         <div className='flex items-center gap-4'>
           <span>Qty: </span>
-          <span className='flex flex-col justify-center gap-2'>
+          <span className='flex flex-col items-center justify-center gap-2'>
             <button
               onClick={() => increaseQuantity(id)}
               aria-label='increase quantity'
+              className='flex h-5 w-5 items-center justify-center rounded-[50%] bg-slate-200 hover:bg-slate-300'
             >
               <FontAwesomeIcon icon={faCaretUp} />
             </button>
@@ -26,6 +27,7 @@ const CartItem = ({
             <button
               onClick={() => decreaseQuantity(id)}
               aria-label='decrease quantity'
+              className='flex h-5 w-5 items-center justify-center rounded-[50%] bg-slate-200 hover:bg-slate-300'
             >
               <FontAwesomeIcon icon={faCaretDown} />
             </button>
