@@ -10,7 +10,7 @@ const Product = ({ productDetail, addToCart }) => {
         alt={title}
         className='aspect-square w-full object-contain'
       />
-      <div className='flex flex-grow flex-col items-start px-3 py-4'>
+      <div className='flex flex-grow flex-col items-start bg-slate-100 px-3 py-4'>
         <div
           title={title}
           className='mb-4 max-h-[7ch] max-w-full overflow-hidden font-bold text-gray-900'
